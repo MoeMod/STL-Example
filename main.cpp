@@ -1,11 +1,14 @@
 ﻿#include <iostream>
-
+#include <algorithm>
 using namespace std;
 
-#include "string/MakeString.h"
+#include "iostream/InputData.h"
+#include "iostream/OutputData.h"
 
 int main()
 {
-	cout << MakeString(1, "2", 3.0, '4') << endl;
+	auto vec = InputData<std::vector<int>>();
+	std::sort(vec.begin(), vec.end());
+	OutputData(vec, ", ");
 	return 0;
 }
